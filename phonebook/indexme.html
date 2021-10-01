@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tailwind.min.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>PhoneBook</title>
+  <style>
+  
+  </style>
+</head>
+<body>
+
+      <div class="container">
+     
+      <form class="w-full max-w-lg mx-auto pt-32">
+    
+        <label class="block uppercase tracking-wide text-yellow-400 text-2xl font-serif font-bold mb-2" for="grid-state">
+            <h1>Phonebook</h1>
+           
+          </label>
+        <label class="block uppercase tracking-wide text-yellow-300 text-xl font-serif font-bold mb-2" for="grid-state">
+            <h2>Whose phone number do you want?</h2>
+           
+          </label>
+          <label class="block uppercase tracking-wide text-white text-xl font-serif font-bold mb-2" for="grid-state">
+            
+            FirstName
+          </label>
+          <div class="relative mx-auto pb-4">
+            <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mx-auto" id="grid-state" name="city">
+                <option value=""></option>
+                <option value="Mobina">Mobina</option>
+                <option value="Matina">Matina</option>
+                <option value="Malina">Malina</option>
+                <option value="Mina">Mina</option>
+                <option value="Mahta">Mahta</option>
+                <option value="Yasna">Yasna</option>
+                <option value="Ali">Ali</option>
+                <option value="Hamid">Hamid</option>
+                <option value="Hassan">Hassan</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 mx-auto">
+              <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-20 md:w-1/2 px-10 mx-auto">
+            <label class="block uppercase tracking-wide text-white font-serif text-xl font-bold mb-2" for="grid-last-name">
+              Phone Number
+            </label>
+            <input class="appearance-none block w-full bg-blue-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-pink-100 focus:border-gray-500" id="grid-last-name" type="text" placeholder=""  name="plateNumber" >
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+      </form>
+     
+    </div>
+    <div class="loader_bg">
+      <div class="loader"><img src="images/loading-1 (1).gif" alt="" /></div>
+    
+    <script>
+  $(document).ready(function() {
+    
+    setTimeout(function () {
+    $('.loader_bg').fadeToggle();
+}, 1500);
+    $("[name='city']").change(function () {
+
+        $("[name='plateNumber']").html("")
+       var myVal = $("[name='city']").val()
+     
+        $.ajax({
+            url:"api.txt" ,
+            dataType:"JSON" ,
+
+            success:function (data) {
+
+                $(data[myVal]).each(function (index , element) {
+
+                  document.querySelector("input").value=element;
+                
+              })
+            },
+            error:function () {
+
+                alert("Error!!!!")
+            }
+        })
+    })
+  })
+    </script>
+</body>
+</html>

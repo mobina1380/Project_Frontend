@@ -1,0 +1,34 @@
+body {
+  background-color: #e9e9e9;
+  background-image: radial-gradient(circle, #3f9cba 0%, #153346 80%);
+}
+
+.loader,
+.loader_bg {
+  width: 100%;
+  height: 100%;
+}
+
+.loader_bg {
+  position: fixed;
+  z-index: 9999999;
+  background-color: #fff;
+  margin-top: -30%;
+}
+
+.loader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -2%;
+}
+/*# sourceMappingURL=style.css.map */

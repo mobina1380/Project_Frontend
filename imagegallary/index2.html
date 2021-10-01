@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="Style1.css">
+   
+</head>
+<body>
+
+<div class="over"></div>
+<div class="box_main">
+	<div class="left">
+		<img class="i" src="images/river-219972_1280.jpg">
+		<img class="i" src="images/3.jpg">
+		<img class="i" src="images/tree-276014_1920.jpg">
+		<img class="i" src="images/5.jpg">
+		<img class="i" src="images/summerfield-336672_1920.jpg">
+        <img class="i" src="images/music-4775509_1920.jpg">
+     	<img class="i" src="images/kuala-lumpur-1820944_1920.jpg">
+		<img class="i" src="images/4.jpg">
+		<img class="i" src="images/mountains-1113547_1920.jpg">
+		<img class="i" src="images/mountains-100367_1920.jpg">
+		<img class="i" src="images/poppies-174276_1920.jpg">
+		<img class="i" src="images/sunset-2191645_1920.jpg">
+		<img class="i" src="images/1.jpg">
+		<img class="i" src="images/2.jpg">
+		<img class="i" src="images/sunset-3689760_1920.jpg">
+		<img class="i" src="images/6.jpg">
+	</div>
+	<div class="right">
+		<img class="img_main" src="images/slider-2091458_1280.jpg">
+	</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".i").click(function () {
+            var q=$(this).attr('src');
+            $(".i").css({"border":'0px solid black'});
+            $(this).css({"border":'2px solid black'});
+            $(".img_main").css({'width':'0','height':0}).animate({'height':'80%','width':'80%'}).attr('src',q);
+        });
+    });
+</script>
+</body>
+</html>

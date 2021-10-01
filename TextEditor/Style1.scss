@@ -1,0 +1,63 @@
+$padding_bace: 40px;
+$min_wh: 100%;
+$bace_color: rgb(255, 0, 140);
+body {
+  /* background: radial-gradient(ellipse at top, #eccbe4, transparent),
+              radial-gradient(ellipse at bottom, #0dc5d6, transparent); */
+}
+h1 {
+  padding-top: $padding_bace;
+  padding-bottom: $padding_bace;
+  text-align: center;
+  color: $bace_color;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  z-index: 100000 !important;
+}
+
+section {
+  padding: 5%;
+  padding-top: 0;
+  height: 100vh;
+}
+
+.side {
+  margin-left: 0;
+}
+button {
+  margin: 1px;
+  border-color: #957dad !important;
+  color: #0c0000 !important;
+  margin-bottom: 1px;
+  font-weigth: bold;
+  &:hover {
+    background-color: #fec8d8 !important;
+  }
+}
+#fake_textarea {
+  width: 100%;
+  height: 300px;
+  border: 3px solid $bace_color;
+  border-radius: 4px;
+}
+
+textarea {
+  padding: 3%;
+  border-color: $bace_color;
+  border-width: thick;
+}
+.flex-box {
+  display: flex;
+  justify-content: center;
+}
+#textarea1 {
+  background: radial-gradient(ellipse at top, #eccbe4, transparent),
+    radial-gradient(ellipse at bottom, #0dc5d6, transparent);
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: $min_wh;
+  min-height: $min_wh;
+}

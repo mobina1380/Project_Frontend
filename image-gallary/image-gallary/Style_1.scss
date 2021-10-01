@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Sunflower:300,500,700");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
+$width: 70%;
+$bace_Number: 0;
+body {
+  margin: $bace_Number;
+  padding: $bace_Number;
+  font-family: "Sunflower", sans-serif;
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+}
+@mixin border() {
+  border: 4px solid #d3d1d1;
+}
+.header h3 {
+  text-align: center;
+  margin: $bace_Number;
+  padding-top: 30px;
+  font-size: 25px;
+
+  font-family: "Gloria Hallelujah";
+}
+
+.imageGallary {
+  width: 720px;
+  margin: 10px auto 20px;
+  cursor: pointer;
+  & img {
+    width: 100%;
+    @include border();
+    box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+ul.thumbnails {
+  margin: $bace_Number auto;
+  padding: $bace_Number;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & li {
+    list-style: none;
+    margin: $bace_Number 10px;
+    & img {
+      @include border();
+      box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: $bace_Number;
+  left: $bace_Number;
+  right: $bace_Number;
+  bottom: $bace_Number;
+}
+.image-gallary {
+  position: fixed;
+  padding: 3px;
+  background-color: #fff;
+  z-index: 3;
+  margin: 20px 15%;
+  max-width: $width;
+  max-height: 600px;
+  width: $width;
+  height: 600px;
+}
+.thumbnails img {
+  width: 78px;
+}
+.loader_bg {
+  position: fixed;
+  z-index: 9999999;
+  background: black;
+  width: 100%;
+  height: 100%;
+}
+
+.loader {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: -10%;
+}
+
+.loader img {
+  width: 150px;
+}

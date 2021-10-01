@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Sunflower:300,500,700");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Sunflower", sans-serif;
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+}
+
+.header h3 {
+  text-align: center;
+  margin: 0;
+  padding-top: 30px;
+  font-size: 25px;
+  font-family: "Gloria Hallelujah";
+}
+
+.imageGallary {
+  width: 720px;
+  margin: 10px auto 20px;
+  cursor: pointer;
+}
+
+.imageGallary img {
+  width: 100%;
+  border: 4px solid #d3d1d1;
+  -webkit-box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.2);
+}
+
+ul.thumbnails {
+  margin: 0 auto;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+ul.thumbnails li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+ul.thumbnails li img {
+  border: 4px solid #d3d1d1;
+  -webkit-box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.image-gallary {
+  position: fixed;
+  padding: 3px;
+  background-color: #fff;
+  z-index: 3;
+  margin: 20px 15%;
+  max-width: 70%;
+  max-height: 600px;
+  width: 70%;
+  height: 600px;
+}
+
+.thumbnails img {
+  width: 78px;
+}
+
+.loader_bg {
+  position: fixed;
+  z-index: 9999999;
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+
+.loader {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: -5%;
+}
+
+.loader img {
+  width: 150px;
+}
+/*# sourceMappingURL=Style_1.css.map */

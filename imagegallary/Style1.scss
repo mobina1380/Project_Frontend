@@ -1,0 +1,80 @@
+$color_base: white;
+$color_base2: lightgray;
+$base_width: 80%;
+$x: 170px;
+:root {
+  --grad: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+  --clip: polygon(52% 65%, 100% 38%, 100% 0, 0 0, 0% 38%);
+  --shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  --c: #eaeaea;
+  --g: #74d800;
+}
+body {
+  font-family: f;
+  background: var(--c);
+  background-image: linear-gradient(
+    90deg,
+    #020024 0%,
+    #090979 35%,
+    #00d4ff 100%
+  );
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.over {
+  clip-path: var(--clip);
+  background-image: var(--grad);
+  height: 100vh;
+  box-shadow: var(--shadow);
+  width: 100%;
+}
+.box_main {
+  width: $base_width;
+  height: 80vh;
+  background: $color_base;
+  border-radius: 5px;
+  box-sizing: var(--shadow);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.left {
+  overflow-y: auto;
+  border-right: 1px solid $color_base2;
+  width: 200px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 200px);
+  height: 80vh;
+}
+@mixin border($bd_px, $color) {
+  border: $bd_px solid $color;
+}
+.i {
+  border-radius: 5px;
+  @include border(1px, $color_base2);
+  padding: 3px;
+  margin-top: 10px;
+  width: $x;
+  height: $x;
+}
+.img_main {
+  width: $base_width;
+  height: 80%;
+  padding: 3px;
+  border-radius: 5px;
+  @include border(1px, var(--c));
+}
